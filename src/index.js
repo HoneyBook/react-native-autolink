@@ -9,7 +9,7 @@
 import React, { Component, createElement } from 'react';
 import PropTypes from 'prop-types';
 import Autolinker from 'autolinker';
-import { Alert, Linking, Platform, StyleSheet, Text } from 'react-native';
+import { Alert, Linking, Platform, StyleSheet, Text,ViewPropTypes } from 'react-native';
 
 const styles = StyleSheet.create({
   link: {
@@ -239,7 +239,7 @@ Autolink.defaultProps = {
 Autolink.propTypes = {
   email: PropTypes.bool,
   hashtag: PropTypes.oneOf([false, 'instagram', 'twitter']),
-  linkStyle: Text.propTypes.style,
+  linkStyle: ViewPropTypes.style,
   mention: PropTypes.oneOf([false, 'instagram', 'twitter']),
   numberOfLines: PropTypes.number,
   onPress: PropTypes.func,
